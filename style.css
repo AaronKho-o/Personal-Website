@@ -50,6 +50,8 @@ img {
 
 .info-wrapper {
   margin-top: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .info-table {
@@ -82,4 +84,26 @@ img {
 .active-row {
     font-weight: bold;
     color: #009879;
+}
+
+.infoForSmallScreen {
+  display: None;
+}
+
+@media screen and (min-width:400px) and (max-width: 560px) {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+  tr { border: 1px solid #ccc; }
+
+  td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
 }
