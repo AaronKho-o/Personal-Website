@@ -116,4 +116,8 @@ img {
   .introduction {
     margin-left: 3%;
   }
+
+  body {
+    overflow-x: hidden;
+  }
 }
