@@ -1,17 +1,7 @@
 getStarted()
 
-
 function getStarted() {
     hidePages('About')
-
-  function hidePages(pageNotToHide) {
-    document.querySelectorAll('li a').forEach((item, idx) => {
-      if (item.innerHTML != pageNotToHide) {
-        document.querySelector(`#${item.innerHTML}`).style.display = 'none'
-      }
-    })
-  }
-
 
   document.querySelectorAll('tr').forEach((row, idx) => {
     row.addEventListener('click', (e) => {
@@ -31,4 +21,17 @@ function getStarted() {
       document.querySelector(`#${e.target.innerHTML}`).style.display = 'flex'
     })
   })
+}
+
+function hidePages(pageNotToHide) {
+    document.querySelectorAll('li a').forEach((item, idx) => {
+      if (item.innerHTML != pageNotToHide) {
+        document.querySelector(`#${item.innerHTML}`).style.display = 'none'
+      }
+    })
+  }
+
+function navigateBar(page) {
+  hidePages(page)
+  document.querySelector(`#${page}`).style.display = 'flex'
 }

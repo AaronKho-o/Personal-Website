@@ -26,7 +26,7 @@ body {
 }
 
 img {
-  margin-top:30px;
+  margin-top:10%;
   box-sizing: border-box;
   margin-bottom: 30px;
   border-radius: 50%;
@@ -50,7 +50,7 @@ img {
 
 .info-wrapper {
   margin-top: 30%;
-  padding-left: 10%;
+  padding-left: 20%;
 }
 
 .info-table {
@@ -89,6 +89,10 @@ img {
   display: None;
 }
 
+#sectional_nav {
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
 
 	/* Force table to not be like tables anymore */
@@ -116,5 +120,13 @@ img {
 
   .info-wrapper {
     overflow: hidden;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  #sectional_nav {
+    display: flex;
   }
 }

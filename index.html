@@ -29,6 +29,15 @@
           <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
         </ul>
+
+        <select id="sectional_nav" class="form-control hidden-md-up" onchange="navigateBar(this.value)">
+          <option value="About">About</option>
+          <option value="Blog">Blog</option>
+          <option value="Projects">Projects</option>
+          <option value="Resume">Resume</option>
+          <option value="Contact">Contact</option>
+        </select>
+
       </header>
     </div>
 
@@ -36,14 +45,14 @@
       <div class = "container">
 
         <div class = "row">
-          <div class="introduction col-sm-6">
+          <div class="introduction col-md-6">
             <img src="nice_pic.jpg">
             <p class="description">Pleasure to make your virtual acquaintance! I started this website to share interesting concepts in statistics, computing and mathematics. The interdependence between all 3 subjects fascinates me, and it was that fascination paired with a hunger to show off their charms that led to the start of this project.</p>
             <p class="description">Outside of time spent working as a DevOps engineer and studies, I enjoy cooking pasta, hiking in the lake district and watching Netflix. Read my blogs to discover more about life in the UK from an Asian's perspective. Feel free to reach out for a cup of tea anytime!
             </p>
           </div>
 
-          <div class = "col-sm-6">
+          <div class = "col-md-6">
             <div class = "info-wrapper">
               <table class = info-table>
                 <tbody>
