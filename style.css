@@ -149,3 +149,10 @@ img {
     color:#e6e6e6;
   }
 }
+
+#bday {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10%;
+  font-weight: bold;
+}
