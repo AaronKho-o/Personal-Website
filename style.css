@@ -148,6 +148,11 @@ img {
     margin-top: 10%;
     padding-left: 0;
   }
+
+  .youtubeVid {
+    height: 45vw;
+    width: 80vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -164,11 +169,6 @@ img {
     display: flex;
     background-color:#202020;
     color:#e6e6e6;
-  }
-
-  .youtubeVid {
-    height: 45vw;
-    width: 80vw;
   }
 }
 
