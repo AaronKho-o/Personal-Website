@@ -121,6 +121,15 @@ img {
   margin-top: 20px;
 }
 
+.title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.blogText {
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 1000px) {
 
   body {
