@@ -116,14 +116,18 @@ img {
 }
 
 #bottom {
-  background-color: #202020;
-  height: 50px;
-  margin-top: 20px;
+  height: 40px;
+  margin-top: 40px;
 }
 
-.title {
+.blogTitle {
   font-weight: bold;
   font-size: 30px;
+  margin-top: 30px;
+}
+
+.blogTitle:Hover {
+  text-decoration: underline;
 }
 
 .blogText {
@@ -136,6 +140,26 @@ img {
   padding-top:15px;
   display: block;
   margin: 0 auto;
+}
+
+.blogImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 0;
+  border: 0;
+  margin-top: 30px;
+}
+
+#allBlogs {
+  display: none;
+  font-style: italic;
+}
+
+#allBlogs:hover {
+  text-decoration: underline;
+  color: blue;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -152,6 +176,10 @@ img {
   .youtubeVid {
     height: 45vw;
     width: 80vw;
+  }
+
+  #allBlogs {
+    justify-content: center;
   }
 }
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Personal Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
@@ -26,7 +26,7 @@
           <li class="nav-item"><a href="" class="nav-link active" aria-current="page">About</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">CV</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Birthday</a></li>
         </ul>
@@ -35,7 +35,7 @@
           <option value="About">About</option>
           <option value="Blog">Blog</option>
           <option value="Projects">Projects</option>
-          <option value="Resume">Resume</option>
+          <option value="CV">CV</option>
           <option value="Contact">Contact</option>
           <option value="Birthday">Birthday</option>
         </select>
@@ -88,25 +88,46 @@
 
     <div id = "Blog">
       <div class = "container">
-        <div class = "title">Why we divide sample variance by n-1</div>
-        <p class = "blogText">It is well know that the formula to calculate variance of a sample dataset is the sum of squares divided by the sample size less one. I remember being asked by a friend: "Why minus one?" To my great shame as a statistics major, I could give neither a rigorous nor intuitive answer. This post serves to regain some lost pride and is aimed at those who have a basic understanding of what mean and variance represent.</p>
-        <p class = "blogText">We shall take an empirical approach, which is a fancy way of saying we work with observations rather than pure theory. Suppose we have a random generator of numbers from 1 to 10. We use it to generate 10 numbers and obtain the set (7 8 1 5 6 9 10 1 2 1).</p>
-        <p class = "blogText">Our goal is to describe this dataset with a single number. Let us take the average to obtain the sample mean = 5. The sample mean is called a statistic, and the sample variance is an example of another.</p>
-        <p class = "blogText">Variance is a measure of how disperse the data is. Thus, it makes sense that it consists of the sum of squared deviations from the sample mean, 5 in this case. The next logical step would be to average it out by dividing by 10. However, think about this for a moment. We are actually introducing bias to our statistic! </p>
-        <p class = "blogText">If our data was represented on a number line, the sample mean would be in the center. Hence the sum of squares with respect to the sample mean would be the smallest possible sum, and this is possible to prove theoretically! If the true mean of our number generator is not 5, our sum of squares would be larger. We will be underestimating the variance if we divide the sum of squares by 10. We need to divide by a lesser vaule to compensate, and that value turns out to be one less the sample size. In our example, we need to divide by 9.</p>
-        <p class = "blogText">Sadly, I am not going to delve into why we divide by n-1 instead of say, n-2. Good resources such as Khan Academy explain it well from a theoretical point of view. An intuitve reasoning of this based on degrees of freedom, which I have found lacking in literature, is in the video below. Kudos for making it this far, and I hope you now have a rough idea on how to answer the title of this post.</p>
-        <iframe class = "youtubeVid"
-        src="https://youtube.com/embed/0UjzDMCl6iw">
-        </iframe>
+
+        <div id = "allBlogs">All Blogs</div>
+
+        <div class = "blogTitle" id = "blogTitle1">Why Divide Sample Variance by n-1</div>
+        <div class = "row blogBody" id = "blogBody1">
+          <p class = "blogText">It is well know that the formula to calculate variance of a sample dataset is the sum of squares divided by the sample size less one. I remember being asked by a friend: "Why minus one?" To my great shame as a statistics major, I could give neither a rigorous nor intuitive answer. This post serves to regain some lost pride and is aimed at those with a basic understanding of descriptive statistics.</p>
+          <p class = "blogText">We shall take an empirical approach, which is a fancy way of saying we work with observations rather than pure theory. Suppose we have a random generator of numbers from 1 to 10. We use it to generate 10 numbers and obtain the set (7 8 1 5 6 9 10 1 2 1).</p>
+          <p class = "blogText">Our goal is to describe this dataset with a single number. Let us take the average to obtain the sample mean = 5. The sample mean is called a statistic and is a measure of central tendency. In simple terms, it tells us where the center of the data is. Median and Mode are other statistics that measure central tendency.</p>
+          <p class = "blogText">Now suppose we want to measure dispersion, or how spread out the data is from the center. The sum of squared deviations from the sample mean is a good indicator of this and illustrated below.</p>
+          <img src = "images/blogs/blog1/sumOfSquares.jpg" class = "blogImg">
+          <p>The next logical step would be to average it out by dividing by 10. However, think about this for a moment. We would be introducing bias to our statistic! </p>
+          <p class = "blogText">If our data was represented on a number line, the sample mean would be in the center. Hence the sum of squares with respect to the sample mean would be the smallest possible sum, and this is possible to prove theoretically! If the true mean of our number generator is not 5, our sum of squares would be larger. We will be underestimating the variance if we divide the sum of squares by 10. We need to divide by a lesser value to compensate, and that value turns out to be one less the sample size. In our example, we need to divide by 9.</p>
+          <img src = "images/blogs/blog1/dataOnNumLine.jpg" class = "blogImg">
+          <p class = "blogText">Sadly, I am not going to delve into why we divide by n-1 instead of say, n-2. Good resources such as <a href = "https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/more-standard-deviation/v/review-and-intuition-why-we-divide-by-n-1-for-the-unbiased-sample-variance" target="_blank">Khan Academy</a> explain it well from a theoretical point of view. An intuitve reasoning of this based on degrees of freedom, which I have found lacking in literature, is in the video below. Kudos for making it this far, and I hope you now have a rough idea on how to answer the title of this post.</p>
+          <iframe class = "youtubeVid"
+          src="https://youtube.com/embed/0UjzDMCl6iw">
+          </iframe>
+        </div>
+
+        <div class = "blogTitle" id = "blogTitle2">Covariance Matrix of High Dimensional Data</div>
+        <div class = "row blogBody" id = "blogBody2">
+          <p class = "blogText">As we trod down the path of statisticians, our datasets increase in both size and complexity. It is well enough analysing 10,000 rows of data, but what if we need to analyse billions of rows with 100,000 variables? This might seem implausible, but certainly not impossible given the <a href = "https://www.researchgate.net/figure/The-exponential-data-growth-estimated-between-2010-and-2020-1_fig1_329298440" target = "_blank">exponential growth of data</a> in the past decade. Dimensional reduction techniques such as Principal Component Analysis (PCA) are more important than ever. This blog aims to discuss the dimensions of covariance matrices corresponding to complex datasets as they play an important role in deriving the aforementioned algorithm and are often confusing in literature.</p>
+          <p class = "blogText">Consider a dataset with 3 observations and each of them 2-dimensional. We represent the data in matrix form with column vectors corresponding to parameters and row vectors corresponding to each observation. Suppose we know the population mean of each variable is zero.</p>
+          <img src = "images/blogs/blog2/varianceOf3x2.jpg" class = "blogImg">
+          <p class = "blogText">As a quick intepretation, the diagonal elements of the covariance matrix correspond to the variance of each col vector which are 1 dimensional datasets. The non-diagonal elements represent the covariance between the two column vectors and are equal. The calculation is quite standard and most texts find the convariance matrix by applying matrix multiplication on the transpose of X with X in that order. However, the only reason it is not the other way round is due to our choice of represention for our data! If the column vectors had corresponded to the observations and row vectors to parameters, the variance of the data matrix would instead be X multiplied by X transposed.</p>
+          <p class = "blogText">This might not seem like a big deal, but statisticians tend to represent single observations as column vectors. Suppose we have one observation with p parameters. On its own, this would be written as a column vector but if there were n observations, it would be a row vector in the matrix of all observations.</p>
+          <p class = "blogText">The image below shows this in the context of our example.</p>
+          <img src = "images/blogs/blog2/varianceOf2x1.jpg" class = "blogImg">
+          <p class = "blogText">This has been the cause of much confusion during my undergraduate years. My advice is to remember that the dimensions of a covariance matrix is always the number of parameters in its dataset, not the number of observations. We are trying to measure the covariance between variables, not between observations. It seems trivial but when reading statistical theory, can give quite a headache since it is all very abstract.</p>
+        </div>
+
       </div>
     </div>
 
     <div id = "Projects">
-
+      Projects
     </div>
 
-    <div id = "Resume">
-      Resume
+    <div id = "CV">
+      CV
     </div>
 
     <div id = "Contact">
