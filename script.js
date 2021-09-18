@@ -82,8 +82,6 @@ function setupBlogs() {
       blog.style.display = 'flex'
       blog.style.fontWeight = 'normal'
     })
-
-    e.target.style.display = 'none'
   })
 
 }
