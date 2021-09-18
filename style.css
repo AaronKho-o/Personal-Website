@@ -155,6 +155,9 @@ img {
 #allBlogs {
   display: none;
   font-style: italic;
+  justify-content: center;
+  background-color: white;
+  border-radius: 100%;
 }
 
 #allBlogs:hover {
@@ -176,10 +179,6 @@ img {
   .youtubeVid {
     height: 45vw;
     width: 80vw;
-  }
-
-  #allBlogs {
-    justify-content: center;
   }
 }
 
