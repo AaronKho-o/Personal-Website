@@ -59,7 +59,7 @@ function setupBlogs() {
             e.target.style.fontWeight = 'bold'
             e.target.style.fontStyle = 'normal'
             e.target.style.background = 'transparent'
-            e.target.style.borderStyle = 'hidden'
+            // e.target.style.borderStyle = 'hidden'
             e.target.style.padding = '0 0 0 0'
             e.target.style.marginBottom = '0'
           } else {
@@ -90,7 +90,7 @@ function setupBlogs() {
       title.style.display = 'flex'
       title.style.fontWeight = 'normal'
       title.style.background = '#FFFDD0';
-      title.style.borderStyle = 'solid';
+      // title.style.borderStyle = 'solid';
       title.style.padding =  '30px 30px 30px 30px';
       title.style.marginBottom = '20px'
     })
