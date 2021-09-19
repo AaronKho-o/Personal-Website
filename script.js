@@ -52,23 +52,31 @@ function setupBlogs() {
     document.querySelectorAll('.blogTitle').forEach((title, idx) => {
       title.style.fontWeight = 'normal'
       title.addEventListener('click', (e) => {
-        document.querySelector('#allBlogs').style.display = 'flex'
         document.querySelectorAll('.blogBody').forEach((blog, idx) => {
           if (blog.id === `blogBody${e.target.id.charAt(e.target.id.length - 1)}`) {
             blog.style.display = 'flex'
+            e.target.style.display = 'flex'
             e.target.style.fontWeight = 'bold'
             e.target.style.fontStyle = 'normal'
+            e.target.style.background = 'transparent'
+            e.target.style.borderStyle = 'hidden'
+            e.target.style.padding = '0 0 0 0'
+            e.target.style.marginBottom = '0'
           } else {
             blog.style.display = 'none'
-            document.querySelectorAll('.blogTitle').forEach((title, idx) => {
-              if (title.id != e.target.id) {
-                title.style.fontWeight = 'normal'
-                title.style.display = 'none'
-              }
-            })
+            document.querySelector(`#blogTitle${blog.id.charAt(blog.id.length - 1)}`).style.display = 'none'
           }
-        })
 
+        })
+      })
+
+      title.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'darkgreen'
+      })
+
+      title.addEventListener('mouseout', (e) => {
+        e.target.style.textDecoration = 'none'
+        e.target.style.color = 'black'
       })
     })
   }
@@ -78,9 +86,13 @@ function setupBlogs() {
       blog.style.display = 'none'
     })
 
-    document.querySelectorAll('.blogTitle').forEach((blog, idx) => {
-      blog.style.display = 'flex'
-      blog.style.fontWeight = 'normal'
+    document.querySelectorAll('.blogTitle').forEach((title, idx) => {
+      title.style.display = 'flex'
+      title.style.fontWeight = 'normal'
+      title.style.background = '#FFFDD0';
+      title.style.borderStyle = 'solid';
+      title.style.padding =  '30px 30px 30px 30px';
+      title.style.marginBottom = '20px'
     })
   })
 
