@@ -3,7 +3,7 @@ body {
   font-size: 20px;
   background-image: url("images/background2.jpg");
   background-repeat: cover;
-  background-position: left;
+  background-position: center;
 }
 
 .container {
@@ -120,13 +120,25 @@ img {
   margin-top: 40px;
 }
 
-.blogTitle {
+.blogTitleMain {
+  display: flex;
   font-size: 30px;
-  color: black;
-  background-color: #FFFDD0;
-  /* border: 1.5px black solid; */
+  font-weight: normal;
+  background-color: #202020;
+  color: lightgreen;
   padding: 30px 30px 30px 30px;
   margin-bottom: 20px;
+}
+
+.blogTitleAlone{
+  color: black !important;
+  font-size: 30px;
+  display: flex;
+  font-weight: bold;
+  padding: 0 0 0 0;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .blogText {
@@ -155,14 +167,14 @@ img {
   display:flex;
   font-style: italic;
   font-size: 20px;
-  justify-content: center;
-  background-color: whitesmoke;
-  border-radius: 100%;
-  margin-bottom: 40px;
+  justify-content: right;
+  text-decoration: underline;
+  /* background-color: whitesmoke;
+  border-radius: 100%; */
+  margin-top: 40px;
 }
 
 #allBlogs:hover {
-  text-decoration: underline;
   color: blue;
 }
 

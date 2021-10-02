@@ -28,7 +28,6 @@
           <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
           <li class="nav-item"><a href="#" class="nav-link">CV</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Birthday</a></li>
         </ul>
 
         <select id="sectional_nav" class="form-control hidden-md-up" onchange="navigateBar(this.value)">
@@ -37,7 +36,6 @@
           <option value="Projects">Projects</option>
           <option value="CV">CV</option>
           <option value="Contact">Contact</option>
-          <option value="Birthday">Birthday</option>
         </select>
 
       </header>
@@ -88,10 +86,7 @@
 
     <div id = "Blog">
       <div class = "container">
-
-        <div id = "allBlogs">All Blogs</div>
-
-        <div class = "blogTitle" id = "blogTitle1">Why Divide Sample Variance by n-1</div>
+        <div class = "blogTitleMain" id = "blogTitle1">Why Divide Sample Variance by n-1</div>
         <div class = "row blogBody" id = "blogBody1">
           <p class = "blogText">It is well know that the formula to calculate variance of a sample dataset is the sum of squares divided by the sample size less one. I remember being asked by a friend: "Why minus one?" To my great shame as a statistics major, I could give neither a rigorous nor intuitive answer. This post serves to regain some lost pride and is aimed at those with a basic understanding of descriptive statistics.</p>
           <p class = "blogText">We shall take an empirical approach, which is a fancy way of saying we work with observations rather than pure theory. Suppose we have a random generator of numbers from 1 to 10. We use it to generate 10 numbers and obtain the set (7 8 1 5 6 9 10 1 2 1).</p>
@@ -107,18 +102,29 @@
           </iframe>
         </div>
 
-        <div class = "blogTitle" id = "blogTitle2">Covariance Matrix of High Dimensional Data</div>
+        <div class = "blogTitleMain" id = "blogTitle2">Covariance Matrix of High Dimensional Data</div>
         <div class = "row blogBody" id = "blogBody2">
           <p class = "blogText">As we trod down the path of statisticians, our datasets increase in both size and complexity. It is well enough analysing 10,000 rows of data, but what if we need to analyse billions of rows with 100,000 variables? This might seem implausible, but certainly not impossible given the <a href = "https://www.researchgate.net/figure/The-exponential-data-growth-estimated-between-2010-and-2020-1_fig1_329298440" target = "_blank">exponential growth of data</a> in the past decade. Dimensional reduction techniques such as Principal Component Analysis (PCA) are more important than ever. This blog aims to discuss the dimensions of covariance matrices corresponding to complex datasets as they play an important role in deriving the aforementioned algorithm and are often confusing in literature.</p>
           <p class = "blogText">Consider a dataset with 3 observations and each of them 2-dimensional. This would be akin to 3 days spent recording the amount of rainfall and hours of sunshine. We represent the data in matrix form with column vectors corresponding to parameters (rainfall & sunshine), and row vectors corresponding to each observation (days). Suppose we know that the true mean (ie. population mean) of each variable is zero.</p>
           <img src = "images/blogs/blog2/varianceOf3x2.jpg" class = "blogImg">
-          <p class = "blogText">As a quick intepretation, the diagonal elements of the covariance matrix correspond to the variance of each column vector which are 1-dimensional datasets. The non-diagonal elements represent the covariance between the two column vectors and are equal. The calculation is quite standard and most texts find the convariance matrix by applying matrix multiplication on the transpose of X with X in that order. However, the only reason it is not the other way round is due to our choice of represention for our data! If the column vectors had corresponded to the observations and row vectors to parameters, the variance of the data matrix would instead be X multiplied by X transposed.</p>
+          <p class = "blogText">As a quick intepretation, the diagonal elements of the covariance matrix correspond to the variance of each column vector which are 1-dimensional datasets. The non-diagonal elements represent the covariance between the two column vectors and are equal. The calculation is quite standard and most texts find the convariance matrix by applying matrix multiplication on the transpose of X with X in that order. However, the only reason it is not the other way round is due to our choice of represention of the data! If the column vectors had corresponded to the observations and row vectors to parameters, the variance of the data matrix would instead be X multiplied by X transposed.</p>
           <p class = "blogText">This might not seem like a big deal, but statisticians tend to represent single observations as column vectors. Suppose we have one observation with p parameters. On its own, this would be written as a column vector but if there were n observations, it would be a row vector in the matrix of all observations.</p>
           <p class = "blogText">The image below shows this in the context of our example.</p>
           <img src = "images/blogs/blog2/varianceOf2x1.jpg" class = "blogImg">
           <p class = "blogText">This has been the cause of much confusion during my undergraduate years. My advice is to remember that the dimensions of a covariance matrix is always the number of parameters in its dataset, not the number of observations. We are trying to measure the covariance between variables, not between observations. It seems trivial but when reading statistical theory, can give quite a headache since it is all very abstract.</p>
         </div>
 
+        <div class = "blogTitleMain" id = "blogTitle3">Effective Sample Size, Variance and Belief</div>
+        <div class = "row blogBody" id = "blogBody3">
+          <p class = "blogText">A quick search of effective sample size exposes many resources which either define it mathematically or in a verbose manner. We state both approaches here and start with an independent and identically distributed (iid) sample where the true mean and variance are known. The effective sample size n* is defined as follows.</p>
+          <img src = "images/blogs/blog3/effectiveSampleSizeDef.jpg" class = "blogImg">
+          <p class = "blogText">Now that is all well and good, but why did statisticians bother defining n* instead of leaving the coefficient of sigma squared as is? Turns out, <span class = "fw-bolder">n* represents the size of an iid sample that contains the same amount of precision as our dataset!</span> Notice here, and in many other web resources, the use of "precision" instead of "information". To explain why the word precision is used, we need to dive into the nuances of variance and discover what it really represents.</p>
+          <p class = "blogText">Suppose you are asked how likely it will rain tomorrow. If you live in the UK, perhaps your answer would be 80% as you think it will rain more likely than not, but how would we explain this thought process mathematically? Human guesses can be modelled with the Beta distribution due to three characteristics. First, it is defined on the interval [0, 1] which represents the range of probability. Second, it can be skewed right or left depending on whether an event is likely or unlikely. Third, the variance can be increased or reduced depending on the strength of belief. To illustrate how variance ties with belief, consider the following example of Sarah and John. Sarah thinks the probability it will rain follows a Beta distribution with mean 0.5 and variance 0.5. John also assumes a Beta distribution but with mean 0.8 and variance 0.1. Anyone with an idea of variance can tell you that John is more <span class = "fw-bolder">precise</span> (confident) about his guess than Sarah. The two distributions are illustrated to make this even clearer.</p>
+          <img src = "images/blogs/blog3/betaDistribution.jpg" class = "blogImg">
+          <p class = "blogText">Thus, we can conclude that the word precise is used because n* represents the size of an iid sample that has the same variance as our dataset. That covers the basics of this intriguing topic, but I encourage you to think about correlation structures and their effect on the value of n*. For example, when correlation is constant and negative, the effective sample size may be larger than the original sample size! It is amazing that this is possible as intuitively, one might assume any correlation among our observations will lead to lower precision since the existence of correlation implies a linear pattern. However, this is not the case and most of the time, correlation is not constant which opens up a huge world to explore!</p>
+        </div>
+
+        <div id = "allBlogs">All Blogs</div>
       </div>
     </div>
 
@@ -132,48 +138,6 @@
 
     <div id = "Contact">
       Contact
-    </div>
-
-    <div id = "Birthday">
-      <div class = "container">
-
-        <div id = "bday">
-          <span>Happy Birthday Love!</span>
-        </div>
-        <div class = "row">
-          <div class="introduction col-md-6">
-            <img src="images/baby.jpg">
-            <p class="description">Happy Birthday my love! You are the reason I wake up not feeling alone. Hope you had a great birthday in Korea, and we can have an even bigger one in Manchester! To my beloved, may God bless you with everything you need and could ever want.</p>
-            <p class="description">Thank you for always listening to me as I go on about things, you have made my life so much more fufilled and joyful just by being there. I hope to be an even better boyfriend to you than you have been girlfriend to me, but the bar you have set is high. Nevertheless I will do my best for my beloved. Love you my boo.
-            </p>
-          </div>
-
-          <div class = "col-md-6">
-            <div class = "info-wrapper">
-              <table class = info-table>
-                <tbody>
-                  <tr>
-                    <td>Name</td>
-                    <td>Anna Kwon</td>
-                  </tr>
-                  <tr>
-                    <td>Age</td>
-                    <td>26</td>
-                  </tr>
-                  <tr class = "active-row">
-                    <td>Career</td>
-                    <td>Girlfriend of Aaron Khoo</td>
-                  </tr>
-                  <tr>
-                    <td>Education</td>
-                    <td>BSc Neuroscience, Kings's College London</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div id = "bottom">

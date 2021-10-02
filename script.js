@@ -49,19 +49,13 @@ function setupBlogs() {
 
 
   function unBoldTitle() {
-    document.querySelectorAll('.blogTitle').forEach((title, idx) => {
-      title.style.fontWeight = 'normal'
+    document.querySelectorAll('.blogTitleMain').forEach((title, idx) => {
       title.addEventListener('click', (e) => {
         document.querySelectorAll('.blogBody').forEach((blog, idx) => {
           if (blog.id === `blogBody${e.target.id.charAt(e.target.id.length - 1)}`) {
             blog.style.display = 'flex'
-            e.target.style.display = 'flex'
-            e.target.style.fontWeight = 'bold'
-            e.target.style.fontStyle = 'normal'
-            e.target.style.background = 'transparent'
-            // e.target.style.borderStyle = 'hidden'
-            e.target.style.padding = '0 0 0 0'
-            e.target.style.marginBottom = '0'
+            e.target.classList.remove('blogTitleMain')
+            e.target.classList.add('blogTitleAlone')
           } else {
             blog.style.display = 'none'
             document.querySelector(`#blogTitle${blog.id.charAt(blog.id.length - 1)}`).style.display = 'none'
@@ -71,12 +65,12 @@ function setupBlogs() {
       })
 
       title.addEventListener('mouseover', (e) => {
-        e.target.style.color = 'darkgreen'
+        e.target.style.color = 'white'
       })
 
       title.addEventListener('mouseout', (e) => {
         e.target.style.textDecoration = 'none'
-        e.target.style.color = 'black'
+        e.target.style.color = 'lightgreen'
       })
     })
   }
@@ -86,14 +80,12 @@ function setupBlogs() {
       blog.style.display = 'none'
     })
 
-    document.querySelectorAll('.blogTitle').forEach((title, idx) => {
+    document.querySelectorAll('.blogTitleMain').forEach((title, idx) => {
       title.style.display = 'flex'
-      title.style.fontWeight = 'normal'
-      title.style.background = '#FFFDD0';
-      // title.style.borderStyle = 'solid';
-      title.style.padding =  '30px 30px 30px 30px';
-      title.style.marginBottom = '20px'
     })
-  })
 
+    let displayedTitle = document.querySelector('.blogTitleAlone')
+    displayedTitle.classList.remove('blogTitleAlone')
+    displayedTitle.classList.add('blogTitleMain')
+  })
 }
