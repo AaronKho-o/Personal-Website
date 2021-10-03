@@ -65,12 +65,12 @@ function setupBlogs() {
       })
 
       title.addEventListener('mouseover', (e) => {
-        e.target.style.color = 'white'
+        e.target.style.color = 'lightgreen'
       })
 
       title.addEventListener('mouseout', (e) => {
         e.target.style.textDecoration = 'none'
-        e.target.style.color = 'lightgreen'
+        e.target.style.color = 'white'
       })
     })
   }
