@@ -125,7 +125,7 @@ img {
   font-size: 30px;
   font-weight: normal;
   background-color: #202020;
-  color: white;
+  color: whitesmoke;
   padding: 30px 30px 30px 30px;
   margin-bottom: 20px;
 }
@@ -169,8 +169,6 @@ img {
   font-size: 20px;
   justify-content: right;
   text-decoration: underline;
-  /* background-color: whitesmoke;
-  border-radius: 100%; */
   margin-top: 40px;
 }
 
@@ -197,15 +195,16 @@ img {
     overflow: hidden;
   }
 
-  /* .nav {
+  .nav {
     display: none;
-  } */
+  }
 
-  /* #sectional_nav {
+  #sectional_nav {
     display: flex;
-    background-color:#202020;
-    color:#e6e6e6;
-  } */
+    justify-content: center;
+    background-color:#002244;
+    color:whitesmoke;
+  }
 }
 
 #contactInfo {

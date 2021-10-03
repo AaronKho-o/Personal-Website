@@ -70,7 +70,7 @@ function setupBlogs() {
 
       title.addEventListener('mouseout', (e) => {
         e.target.style.textDecoration = 'none'
-        e.target.style.color = 'white'
+        e.target.style.color = 'whitesmoke'
       })
     })
   }
