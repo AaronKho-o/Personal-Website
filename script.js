@@ -61,6 +61,8 @@ function setupBlogs() {
             document.querySelector(`#blogTitle${blog.id.charAt(blog.id.length - 1)}`).style.display = 'none'
           }
 
+          document.querySelector('#allBlogs').style.display = 'flex'
+
         })
       })
 
@@ -76,6 +78,7 @@ function setupBlogs() {
   }
 
   document.querySelector('#allBlogs').addEventListener('click', (e) => {
+    e.target.style.display = 'none'
     document.querySelectorAll('.blogBody').forEach((blog, idx) => {
       blog.style.display = 'none'
     })

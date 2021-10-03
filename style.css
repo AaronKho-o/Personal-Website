@@ -164,11 +164,10 @@ img {
 }
 
 #allBlogs {
-  display:flex;
+  display:none;
   font-style: italic;
   font-size: 20px;
   justify-content: right;
-  text-decoration: underline;
   margin-top: 40px;
 }
 
@@ -211,6 +210,10 @@ img {
 
   #star {
     display: none;
+  }
+
+  #allBlogs {
+    text-align: center;
   }
 }
 

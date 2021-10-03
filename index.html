@@ -84,7 +84,7 @@
 
     <div id = "Blog">
       <div class = "container">
-        <div class = "blogTitleMain" id = "blogTitle1">Why Divide Sample Variance by n-1</div>
+        <div class = "blogTitleMain" id = "blogTitle1" tabindex='0'>Why Divide Sample Variance by n-1</div>
         <div class = "row blogBody" id = "blogBody1">
           <p class = "blogText">It is well know that the formula to calculate variance of a sample dataset is the sum of squares divided by the sample size less one. I remember being asked by a friend: "Why minus one?" To my great shame as a statistics major, I could give neither a rigorous nor intuitive answer. This post serves to regain some lost pride and is aimed at those with a basic understanding of descriptive statistics.</p>
           <p class = "blogText">We shall take an empirical approach, which is a fancy way of saying we work with observations rather than pure theory. Suppose we have a random generator of numbers from 1 to 10. We use it to generate 10 numbers and obtain the set (7 8 1 5 6 9 10 1 2 1).</p>
@@ -100,7 +100,7 @@
           </iframe>
         </div>
 
-        <div class = "blogTitleMain" id = "blogTitle2">Covariance Matrix of High Dimensional Data</div>
+        <div class = "blogTitleMain" id = "blogTitle2" tabindex='0'>Covariance Matrix of High Dimensional Data</div>
         <div class = "row blogBody" id = "blogBody2">
           <p class = "blogText">As we trod down the path of statisticians, our datasets increase in both size and complexity. It is well enough analysing 10,000 rows of data, but what if we need to analyse billions of rows with 100,000 variables? This might seem implausible, but certainly not impossible given the <a href = "https://www.researchgate.net/figure/The-exponential-data-growth-estimated-between-2010-and-2020-1_fig1_329298440" target = "_blank">exponential growth of data</a> in the past decade. Dimensional reduction techniques such as Principal Component Analysis (PCA) are more important than ever. This blog aims to discuss the dimensions of covariance matrices corresponding to complex datasets as they play an important role in deriving the aforementioned algorithm and are often confusing in literature.</p>
           <p class = "blogText">Consider a dataset with 3 observations and each of them 2-dimensional. This would be akin to 3 days spent recording the amount of rainfall and hours of sunshine. We represent the data in matrix form with column vectors corresponding to parameters (rainfall & sunshine), and row vectors corresponding to each observation (days). Suppose we know that the true mean (ie. population mean) of each variable is zero.</p>
@@ -112,7 +112,7 @@
           <p class = "blogText">This has been the cause of much confusion during my undergraduate years. My advice is to remember that the dimensions of a covariance matrix is always the number of parameters in its dataset, not the number of observations. We are trying to measure the covariance between variables, not between observations. It seems trivial but when reading statistical theory, can give quite a headache since it is all very abstract.</p>
         </div>
 
-        <div class = "blogTitleMain" id = "blogTitle3">Effective Sample Size, Variance and Belief</div>
+        <div class = "blogTitleMain" id = "blogTitle3" tabindex='0'>Effective Sample Size, Variance and Belief</div>
         <div class = "row blogBody" id = "blogBody3">
           <p class = "blogText">A quick search of effective sample size exposes many resources which either define it mathematically or in a verbose manner. We state both approaches here and start with an independent and identically distributed (iid) sample where the true mean and variance are known. The effective sample size n* is defined as follows.</p>
           <img src = "images/blogs/blog3/effectiveSampleSizeDef.jpg" class = "blogImg">
@@ -122,7 +122,7 @@
           <p class = "blogText">Thus, we can conclude that the word precise is used because n* represents the size of an iid sample that has the same variance as our dataset. That covers the basics of this intriguing topic, but I encourage you to think about correlation structures and their effect on the value of n*. For example, when correlation is constant and negative, the effective sample size may be larger than the original sample size! It is amazing that this is possible as intuitively, one might assume any correlation among our observations will lead to lower precision since the existence of correlation implies a linear pattern. However, this is not the case and most of the time correlation is not even constant!</p>
         </div>
 
-        <div id = "allBlogs">All Blogs</div>
+        <div id = "allBlogs">All Blogs →</div>
       </div>
     </div>
 
