@@ -208,8 +208,8 @@ img {
   option {
     text-align-last:center;
   }
-  
-  svg {
+
+  #star {
     display: none;
   }
 }
