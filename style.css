@@ -203,10 +203,11 @@ img {
     display: flex;
     background-color:#002244;
     color:whitesmoke;
+    text-align: center;
   }
 
   option {
-    text-align: center;
+    text-align-last:center;
   }
 }
 
