@@ -197,20 +197,18 @@ img {
     overflow: hidden;
   }
 
-  .nav {
+  /* .nav {
     display: none;
-  }
+  } */
 
-  #sectional_nav {
+  /* #sectional_nav {
     display: flex;
     background-color:#202020;
     color:#e6e6e6;
-  }
+  } */
 }
 
-#bday {
+#contactInfo {
   text-align: center;
-  font-size: 30px;
-  margin-bottom: 10%;
-  font-weight: bold;
+  margin-top: 100px;
 }
