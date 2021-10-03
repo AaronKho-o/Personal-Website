@@ -201,9 +201,12 @@ img {
 
   #sectional_nav {
     display: flex;
-    justify-content: center;
     background-color:#002244;
     color:whitesmoke;
+  }
+
+  option {
+    text-align: center;
   }
 }
 
