@@ -208,6 +208,10 @@ img {
   option {
     text-align-last:center;
   }
+  
+  svg {
+    display: none;
+  }
 }
 
 #contactInfo {
