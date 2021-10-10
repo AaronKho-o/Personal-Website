@@ -183,7 +183,7 @@ body {
 
 .projectText {
   width: 50%;
-  padding: 3% 5% 0 9%;
+  padding: 2% 0 3% 5%;
 }
 
 .projectTitle {
@@ -192,15 +192,14 @@ body {
 }
 
 .projectDescription {
-  margin: 5% 0 5% 0;
-  padding-left: 1%;
+  margin: 4% 0 4% 0;
+  color:#585858;
 }
 
 .projectAction {
   display: inline-block;
-  color: #101010;
+  color:#101010;
   text-decoration: none;
-  padding-left: 1%;
   width: 100%;
   margin-bottom: 2%;
 }
@@ -234,16 +233,6 @@ body {
   .projectText {
     width: 100%;
     padding: 5% 0 3% 0;
-  }
-
-  .projectDescription {
-    padding-left: 0.5%;
-    margin: 3% 0 3% 0;
-  }
-
-  .projectAction {
-    padding-left: 0.5%;
-    margin-bottom: 1.5%;
   }
 }
 
