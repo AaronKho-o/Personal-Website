@@ -179,6 +179,7 @@ body {
 
 .projImg {
   width: 50%;
+  max-height: 100%;
 }
 
 .projectText {
