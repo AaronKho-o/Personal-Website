@@ -178,6 +178,7 @@ body {
 }
 
 .projImg {
+  display: block;
   width: 50%;
   max-height: 100%;
 }
