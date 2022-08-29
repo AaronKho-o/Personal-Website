@@ -183,9 +183,14 @@ body {
   max-height: 100%;
 }
 
-.projectText {
+.projectTextRight {
   width: 50%;
-  padding: 2% 0 3% 5%;
+  padding: 2% 5% 3% 5%;
+}
+
+.projectTextLeft {
+  width: 50%;
+  padding: 2% 5% 3% 5%;
 }
 
 .projectTitle {
@@ -232,7 +237,12 @@ body {
     width: 100%;
   }
 
-  .projectText {
+  .projectTextRight {
+    width: 100%;
+    padding: 5% 0 3% 0;
+  }
+
+  .projectTextLeft {
     width: 100%;
     padding: 5% 0 3% 0;
   }
