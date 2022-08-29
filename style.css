@@ -177,7 +177,13 @@ body {
   justify-content: center;
 }
 
-.projImg {
+.projImgLeft {
+  display: block;
+  width: 50%;
+  max-height: 100%;
+}
+
+.projImgRight {
   display: block;
   width: 50%;
   max-height: 100%;
@@ -190,7 +196,7 @@ body {
 
 .projectTextLeft {
   width: 50%;
-  padding: 2% 5% 3% 5%;
+  padding: 2% 5% 3% 4%;
 }
 
 .projectTitle {
@@ -233,7 +239,11 @@ body {
     width: 80vw;
   }
 
-  .projImg {
+  .projImgLeft {
+    width: 100%;
+  }
+
+  .projImgRight {
     width: 100%;
   }
 
