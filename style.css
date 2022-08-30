@@ -242,11 +242,13 @@ body {
   }
 
   .projImgLeft {
-    width: 100%;
+    /* width: 100%; */
+    display: None;
   }
 
   .projImgRight {
-    width: 100%;
+    /* width: 100%; */
+    display: None;
   }
 
   .projectTextRight {
@@ -281,6 +283,14 @@ body {
   }
 
   #star {
+    display: none;
+  }
+
+  .projImgLeft {
+    display: none;
+  }
+
+  .projImgRight {
     display: none;
   }
 }
