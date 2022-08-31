@@ -30,9 +30,9 @@ body {
 
 #personalPic {
   box-sizing: border-box;
-  border-radius: 50%;
+  border-radius: 40%;
   border: 5px solid whitesmoke;
-  width: 80%;
+  width: 70%;
   margin: 10% 0 30px 0;
 }
 
@@ -63,6 +63,7 @@ body {
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    justify-content: center
 }
 
 .info-table th,
@@ -125,8 +126,8 @@ body {
   display: flex;
   font-size: 30px;
   font-weight: normal;
-  background-color: #202020;
-  color: whitesmoke;
+  background-color: #E1D7D5;
+  color: black;
   padding: 30px 30px 30px 30px;
   margin-bottom: 20px;
 }
@@ -274,6 +275,7 @@ body {
 
   #sectional_nav {
     display: flex;
+    justify-content: center;
     background-color:#002244;
     color:whitesmoke;
   }

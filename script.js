@@ -19,6 +19,11 @@ function getStarted() {
       document.querySelector('.nav-link.active').className = "nav-link"
       e.target.className = "nav-link active"
       hidePages(`${e.target.innerHTML}`)
+
+      if (e.target.innerHTML == 'Blog') {
+          resetBlogs()
+      }
+
       document.querySelector(`#${e.target.innerHTML}`).style.display = 'flex'
     })
   })
@@ -30,7 +35,7 @@ function hidePages(pageNotToHide) {
         document.querySelector(`#${item.innerHTML}`).style.display = 'none'
       }
     })
-  }
+}
 
 function navigateBar(page) {
   hidePages(page)
@@ -67,28 +72,38 @@ function setupBlogs() {
       })
 
       title.addEventListener('mouseover', (e) => {
-        e.target.style.color = 'lightgreen'
+        // e.target.style.color = 'lightgreen'
+        e.target.style.color = 'blue'
       })
 
       title.addEventListener('mouseout', (e) => {
-        e.target.style.textDecoration = 'none'
-        e.target.style.color = 'whitesmoke'
+        // e.target.style.textDecoration = 'none'
+        // e.target.style.color = 'whitesmoke'
+        e.target.style.color = 'black'
       })
     })
   }
 
   document.querySelector('#allBlogs').addEventListener('click', (e) => {
-    e.target.style.display = 'none'
-    document.querySelectorAll('.blogBody').forEach((blog, idx) => {
-      blog.style.display = 'none'
-    })
+    resetBlogs()
+  })
+}
 
-    document.querySelectorAll('.blogTitleMain').forEach((title, idx) => {
-      title.style.display = 'flex'
-    })
+function resetBlogs() {
+  document.querySelectorAll('.blogBody').forEach((blog, idx) => {
+    blog.style.display = 'none'
+  })
 
-    let displayedTitle = document.querySelector('.blogTitleAlone')
+  document.querySelectorAll('.blogTitleMain').forEach((title, idx) => {
+    title.style.display = 'flex'
+  })
+
+  let displayedTitle = document.querySelector('.blogTitleAlone')
+  try {
     displayedTitle.classList.remove('blogTitleAlone')
     displayedTitle.classList.add('blogTitleMain')
-  })
+    document.querySelector('#allBlogs').style.display = 'none'
+  } catch(error) {
+
+  }
 }

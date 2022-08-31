@@ -44,9 +44,8 @@
 
         <div class = "row">
           <div class="introduction col-md-6">
-            <img src="images/personalPic2.jpg" id = "personalPic">
-            <p class="description">Pleasure to make your virtual acquaintance! This website is where I share small snipets of the history of humanity trying to explain the world through mathematics and then statistics.</p>
-            <p class="description">I am a devote Christian - Tim Keller's book "The Reason For God" is one I recently completed and a good read if you are interested. I enjoy group activities such as hiking and running, so feel free to reach out for a chat anytime!</p>
+            <img src="images/personalPic3.jpg" id = "personalPic">
+            <p class="description">Pleasure to make your virtual acquaintance - this website is where I post blogs about life and mathematical projects that are really interesting! It is relatively new hence there is a lot more to come! Aside from mathematics and coding, I enjoy reading, hiking, and running.</p>
           </div>
 
           <div class = "col-md-6">
@@ -76,9 +75,9 @@
                 </tbody>
               </table>
 
-              <div id = "statsPicWrapper">
+              <!-- <div id = "statsPicWrapper">
                 <img id = "statsPic" src = "images/statsPic.jpg">
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -87,7 +86,7 @@
 
     <div id = "Blog">
       <div class = "container">
-        <div class = "blogTitleMain" id = "blogTitle1" tabindex='0'>Why Divide Sample Variance by n-1</div>
+        <!-- <div class = "blogTitleMain" id = "blogTitle1" tabindex='0'>Why Divide Sample Variance by n-1</div>
         <div class = "row blogBody" id = "blogBody1">
           <p class = "blogText">It is well known that the formula to calculate variance of a sample dataset is the sum of squares divided by the sample size less one. I remember being asked by a friend: "Why minus one?" To my great shame as a statistics major, I could give neither a rigorous nor intuitive answer. This post serves to regain some lost pride and is aimed at those with a basic understanding of descriptive statistics.</p>
           <p class = "blogText">We shall take an empirical approach, which is a fancy way of saying we work with observations rather than pure theory. Suppose we have a random generator of numbers from 1 to 10. We use it to generate 10 numbers and obtain the set (7 8 1 5 6 9 10 1 2 1).</p>
@@ -101,7 +100,7 @@
           <iframe class = "youtubeVid"
           src="https://youtube.com/embed/0UjzDMCl6iw">
           </iframe>
-        </div>
+        </div> -->
 
         <div class = "blogTitleMain" id = "blogTitle2" tabindex='0'>Covariance Matrix of High Dimensional Data</div>
         <div class = "row blogBody" id = "blogBody2">
@@ -115,7 +114,7 @@
           <p class = "blogText">This has been the cause of much confusion during my undergraduate years. My advice is to remember that the dimensions of a covariance matrix is always the number of parameters in its dataset, not the number of observations. We are trying to measure the covariance between variables, not between observations. It seems trivial but when reading statistical theory, can cause a headache since it is all very abstract.</p>
         </div>
 
-        <div class = "blogTitleMain" id = "blogTitle3" tabindex='0'>Effective Sample Size, Variance and Belief</div>
+        <!-- <div class = "blogTitleMain" id = "blogTitle3" tabindex='0'>Effective Sample Size, Variance and Belief</div>
         <div class = "row blogBody" id = "blogBody3">
           <p class = "blogText">A quick search of effective sample size exposes many resources which either define it mathematically or in a verbose manner. We state both approaches here and start with an independent and identically distributed (iid) sample where the true mean and variance are known. The effective sample size n* is defined as follows.</p>
           <img src = "images/blogs/blog3/effectiveSampleSizeDef.jpg" class = "blogImg">
@@ -123,7 +122,7 @@
           <p class = "blogText">Suppose you are asked how likely it will rain tomorrow. If you live in the UK, perhaps your answer would be 80% as you think it will rain more likely than not, but how would we explain this thought process mathematically? Human guesses can be modelled with the Beta distribution due to three characteristics. First, it is defined on the interval [0, 1] which represents the range of probability. Second, it can be skewed right or left depending on whether an event is likely or unlikely. Third, the variance can be increased or reduced depending on the strength of belief. To illustrate how variance ties with belief, consider the following example of Sarah and John. Sarah thinks the probability it will rain follows a Beta distribution with mean 0.5 and variance 0.5. John also assumes a Beta distribution but with mean 0.8 and variance 0.1. Anyone with an idea of variance can tell you that John is more <span class = "fw-bolder">precise</span> (confident) about his guess than Sarah. The two distributions are illustrated to make this even clearer.</p>
           <img src = "images/blogs/blog3/betaDistribution.jpg" class = "blogImg">
           <p class = "blogText">Thus, we can conclude that the word precise is used because n* represents the size of an iid sample that has the same variance as our dataset. That covers the basics of this intriguing topic, but I encourage you to think about correlation structures and their effect on the value of n*. For example, when correlation is constant and negative, the effective sample size may be larger than the original sample size! It is amazing that this is possible as intuitively, one might assume any correlation among our observations will lead to lower precision since the existence of correlation implies a linear pattern. However, this is not the case and most of the time correlation is not even constant!</p>
-        </div>
+        </div> -->
 
         <div id = "allBlogs">All Blogs →</div>
       </div>
@@ -152,7 +151,7 @@
           <img src = "images/projects/variance/guess2.jpg" class = "projImgLeft">
           <div class = "projectTextRight">
             <div class = "projectTitle">Belief in our assumptions - statistically</div>
-            <div class = "projectDescription">How do humans guess and why are we more sure about some guess estimates than others? In statistics, the beta distribution is the most common one used to model the human mind. We explain concepts such as variance and precision in ways which clarify more about this intriguing topic</div>
+            <div class = "projectDescription">How do humans guess and why are we more sure about some guess estimates than others? In statistics, the beta distribution is the most common one used to model the human mind. We explain concepts such as variance and precision in ways which clarify more about this intriguing topic.</div>
             <a class="projectAction" href = "https://github.com/AaronKho-o/Mathematics-and-Statistics/blob/main/VarianceAndBelief/Why%20Divide%20Sample%20Variance%20by%20n-1.pdf" target = "_blank">Explore sample variance →</a>
             <a class="projectAction" href = "https://github.com/AaronKho-o/Mathematics-and-Statistics/blob/main/VarianceAndBelief/Effective%20Sample%20Size%2C%20Variance%20and%20Belief.pdf" target = "_blank">Understand effective sample size →</a>
           </div>
