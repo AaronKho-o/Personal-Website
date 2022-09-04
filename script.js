@@ -27,6 +27,16 @@ function getStarted() {
       document.querySelector(`#${e.target.innerHTML}`).style.display = 'flex'
     })
   })
+
+  // document.querySelectorAll('option').forEach((option, idx) => {
+  //   if (option.innerHTML == 'Blog') {
+  //     console.log('lo')
+  //     option.addEventListener('click', (e) => {
+  //       console.log('hi')
+  //       resetBlogs()
+  //     })
+  //   }
+  // })
 }
 
 function hidePages(pageNotToHide) {
@@ -39,6 +49,9 @@ function hidePages(pageNotToHide) {
 
 function navigateBar(page) {
   hidePages(page)
+  if (page == 'Blog') {
+    resetBlogs()
+  }
   document.querySelector(`#${page}`).style.display = 'flex'
 }
 
